@@ -1,0 +1,161 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Assuming you have a separate CSS file for the Sidebar component */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 260px; /* Sidebar initial width when open */
+  background-color: #1e1734;
+  color: #fff;
+  overflow-y: auto;
+  padding-top: 60px;
+  transition: width 0.3s ease;
+}
+
+.sidebar.toggled {
+  width: 60px; /* Sidebar width when closed */
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.menu-item   {
+ 
+  cursor: pointer;
+}
+
+.submenu {
+  padding-left: 20px;
+}
+
+.submenu-item {
+  margin-bottom: 10px;
+
+}
+.submenu-item:hover{
+  color: #898989;
+}
+
+
+.sidebar-collapser {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: none;
+  border-radius: 2.5rem;
+  cursor: pointer;
+  background-color: #2b2b2b;
+  font-size: 24px;
+
+}
+
+
+
+
+
+
+.sidebar-content .menu-item {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-content .menu-item .icon {
+  margin-right: 8px; 
+}
+
+
+
+@keyframes shake {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-5px); }
+  50% { transform: translateY(5px); }
+  75% { transform: translateY(-5px); }
+  100% { transform: translateY(5px); }
+}
+
+.menu-item:hover .icon {
+  color: #898989;
+  animation: shake 0.8s ease infinite;
+}
+
+.menu-item:hover{
+  color: #898989;
+
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    padding-top: 100px; 
+    transition: none; 
+  }
+
+  .sidebar.toggled {
+    display: none; 
+  }
+}
