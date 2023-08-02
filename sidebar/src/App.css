@@ -150,12 +150,10 @@
 
 @media (max-width: 768px) {
   .sidebar {
-    width: 100%;
-    padding-top: 100px; 
-    transition: none; 
+    width: 45%;
+    
+  
   }
 
-  .sidebar.toggled {
-    display: none; 
-  }
+ 
 }
